@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CampusCafe – Checkout</title>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><h1>CampusCafe</h1><p>Checkout</p></div>
+    <a class="btn btn-secondary" href="../index.html">← Back to menu</a>
+  </header>
+
+  <main class="checkout-wrapper">
+    <section class="checkout-box">
+      <h2>Order Summary</h2>
+      <ul class="cart-list" id="orderList"></ul>
+      <div class="promo-row">
+        <input id="promoInput" placeholder="Promo code (e.g. STUDENT15)">
+        <button class="btn btn-secondary" id="applyPromo" type="button">Apply</button>
+      </div>
+      <p class="msg-error" id="promoMsg"></p>
+      <div class="summary-row"><span>Subtotal</span><span id="subtotal">₹0.00</span></div>
+      <div class="summary-row"><span>Discount</span><span id="discount">−₹0.00</span></div>
+      <div class="summary-row summary-total"><span>Grand Total</span><span id="grandTotal">₹0.00</span></div>
+    </section>
+
+    <section class="checkout-box">
+      <h2>Your Details</h2>
+      <form id="orderForm" novalidate>
+        <div class="form-group"><label for="fullName">Full Name</label><input id="fullName" autocomplete="name"></div>
+        <div class="form-group"><label for="rollNo">Roll Number</label><input id="rollNo"></div>
+        <p class="msg-error" id="formMsg"></p>
+        <button class="btn btn-primary" type="submit">Confirm Order</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="../js/menuData.js"></script>
+  <script src="../js/checkout.js"></script>
+</body>
+</html>
